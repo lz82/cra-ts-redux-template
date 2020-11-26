@@ -2,13 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import Main from '@/components/main';
+import Home from '@/pages/home';
 import './App.css';
 import css from './app.module.less';
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <Home />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />

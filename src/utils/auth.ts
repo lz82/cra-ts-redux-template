@@ -18,7 +18,7 @@ export function setToken(val: string): void {
  * 获取token
  */
 export function getToken() {
-  return Cookies.get(TOKEN_KEY);
+  return Cookies.get(TOKEN_KEY) || '';
 }
 
 /**
