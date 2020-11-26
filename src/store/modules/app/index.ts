@@ -6,19 +6,27 @@ import { appApi } from '@/services';
 interface AppState {
   token: string;
   errMsg: string;
-  userInfo: {}
+  userInfo: {};
 }
 
 const initialState: AppState = {
   token: getToken(),
   errMsg: '',
-  userInfo: {}
+  userInfo: {
+    name: 'lz',
+    age: 18,
+    gender: 'M'
+  }
 };
 
 export const appSlice = createSlice({
   name: 'app',
   initialState,
   reducers: {
+    // Redux Toolkit allows us to write "mutating" logic in reducers.It
+    // doesn't actually mutate the state because it uses the Immer library,
+    // which detects changes to a "draft state" and produces a brand new
+    // immutable state based off those changes
     setToken: (state, action: PayloadAction<string>) => {
       state.token = action.payload;
     },
