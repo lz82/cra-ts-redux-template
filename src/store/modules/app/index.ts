@@ -1,17 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { useSelector } from 'react-redux'
 import { AppThunk, RootState } from '@/store';
-import { getToken, setToken as setTokenInCookie } from '@/utils/auth'
-import { appApi } from '@/services'
+import { getToken, setToken as setTokenInCookie } from '@/utils/auth';
+import { appApi } from '@/services';
 
 interface AppState {
   token: string;
   errMsg: string;
+  userInfo: {}
 }
 
 const initialState: AppState = {
   token: getToken(),
-  errMsg: ''
+  errMsg: '',
+  userInfo: {}
 };
 
 export const appSlice = createSlice({
@@ -19,16 +20,16 @@ export const appSlice = createSlice({
   initialState,
   reducers: {
     setToken: (state, action: PayloadAction<string>) => {
-      state.token = action.payload
+      state.token = action.payload;
     },
     clearToken: (state) => {
-      state.token = ''
+      state.token = '';
     },
     setErrMsg: (state, action: PayloadAction<string>) => {
-      state.errMsg = action.payload
+      state.errMsg = action.payload;
     },
     clearErrMsg: (state) => {
-      state.errMsg = ''
+      state.errMsg = '';
     }
   }
 });
@@ -52,7 +53,7 @@ export const checkLogin = (data: any): AppThunk => async (dispatch) => {
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
-export const selectToken = (state: RootState) => state.app.token
-export const selectErrMsg = (state: RootState) => state.app.errMsg
+export const selectToken = (state: RootState) => state.app.token;
+export const selectErrMsg = (state: RootState) => state.app.errMsg;
 
 export default appSlice.reducer;

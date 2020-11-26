@@ -11,6 +11,12 @@ const Home = () => {
     dispatch(checkLogin({ username: '1', password: '2', verifyCode: 'c' }));
   }, []);
 
+  useEffect(() => {
+    if (token) {
+      // 根据token获取用户信息
+    }
+  }, [token]);
+
   return (
     <div className={css['home']}>
       home{token}
