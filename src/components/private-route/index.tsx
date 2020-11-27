@@ -1,16 +1,16 @@
 import React, { FC, useEffect, ReactNode } from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Route, Redirect, useLocation, useHistory } from 'react-router-dom';
-
+import { selectToken } from '@/store/modules/app';
 import { getToken } from '@/utils/auth';
 
 export interface PrivateRouteProps {
-  token: string;
   render: (props: any) => ReactNode;
 }
 
-const PrivateRoute: FC<PrivateRouteProps> = ({ token, render, ...rest }) => {
+const PrivateRoute: FC<PrivateRouteProps> = ({ render, ...rest }) => {
   const { pathname, search } = useLocation();
+  const token = useSelector(selectToken);
 
   const history = useHistory();
   useEffect(() => {

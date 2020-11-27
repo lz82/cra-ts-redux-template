@@ -7,3 +7,9 @@ export interface ICheckLoginRequest {
 export interface ICheckLoginResponse {
   token: string;
 }
+
+export interface IGetUserInfoResponse {
+  username: string;
+  age: number;
+  gender: string;
+}
