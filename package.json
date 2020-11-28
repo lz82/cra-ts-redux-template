@@ -61,6 +61,7 @@
   },
   "devDependencies": {
     "@craco/craco": "^5.8.0",
+    "@loadable/component": "^5.14.1",
     "@types/qs": "^6.9.5",
     "@types/react-router-dom": "^5.1.6",
     "craco-less": "^1.17.0",

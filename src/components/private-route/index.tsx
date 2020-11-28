@@ -15,7 +15,7 @@ const PrivateRoute: FC<PrivateRouteProps> = ({ render, ...rest }) => {
   const history = useHistory();
   useEffect(() => {
     if (!token) {
-      history.push('/pub/login', { from: pathname + search });
+      history.push('/login', { from: pathname + search });
     }
   }, [history, pathname, search, token]);
   return (
@@ -27,7 +27,7 @@ const PrivateRoute: FC<PrivateRouteProps> = ({ render, ...rest }) => {
         ) : (
           <Redirect
             to={{
-              pathname: '/pub/login',
+              pathname: '/login',
               state: {
                 from: pathname + search
               }
