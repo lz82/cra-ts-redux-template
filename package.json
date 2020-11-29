@@ -2,6 +2,7 @@
   "name": "react-rtk-ts",
   "version": "0.1.0",
   "private": true,
+  "token": "_react_rtk_ts_auth_",
   "dependencies": {
     "@reduxjs/toolkit": "^1.2.5",
     "@testing-library/jest-dom": "^4.2.4",
