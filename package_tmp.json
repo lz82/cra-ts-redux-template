@@ -1,9 +1,9 @@
 {
-  "name": "<%=name%>",
-  "version": "<%=verison%>",
+  "name": "",
+  "version": "",
   "private": true,
-  "token": "<%=token%>",
-  "description": "<%=desc%>",
+  "token": "",
+  "description": "",
   "dependencies": {
     "@reduxjs/toolkit": "^1.2.5",
     "@testing-library/jest-dom": "^4.2.4",
