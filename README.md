@@ -65,13 +65,13 @@
 统一在`react-app-env.d.ts`中声明
 
 ```typescript
-declare module "*.svg" {
+declare module '*.svg' {
   const content: any;
   export default content;
 }
 
-declare module "*.png";
-declare module "*.jpg";
+declare module '*.png';
+declare module '*.jpg';
 ```
 
 ## Error Boundary(错误边界)
@@ -92,3 +92,9 @@ declare module "*.jpg";
 默认`display:none`,当`loading`时将`display`设为`flex`即可居中显示
 
 在`utils/loading.ts`中暴露了`showLoading`和`hideLoading`两个方法，可以直接使用
+
+## 特性
+
+- 使用`normalize.css`来重置样式
+- 使用`corj-js`和`react-app-polyfill`来支持 IE 浏览器
+- 使用`classnames`来进行`classname`管理
