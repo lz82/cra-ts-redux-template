@@ -1,5 +1,9 @@
+import 'core-js/es';
+import 'react-app-polyfill/ie9';
+import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css/normalize.css';
 import './styles/index.less';
 import App from '@/pages/app';
 import { store } from '@/store';

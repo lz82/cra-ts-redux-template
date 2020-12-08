@@ -51,20 +51,27 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "ie  > 9"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "ie  > 9"
     ]
   },
   "devDependencies": {
     "@craco/craco": "^5.8.0",
+    "@types/classnames": "^2.2.11",
     "@types/qs": "^6.9.5",
     "@types/react-router-dom": "^5.1.6",
+    "classnames": "^2.2.6",
+    "core-js": "^3.8.1",
     "craco-less": "^1.17.0",
     "craco-plugin-style-resources-loader": "^0.0.3",
-    "qs": "^6.9.4"
+    "normalize.css": "^8.0.1",
+    "qs": "^6.9.4",
+    "react-app-polyfill": "^2.0.0"
   }
 }
